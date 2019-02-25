@@ -10,7 +10,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class HomeComponent implements OnInit,OnChanges {
   path = '';
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(public router: Router, private activatedRoute: ActivatedRoute) {
   }
   isCollapsed = false;
   ngOnInit() {
