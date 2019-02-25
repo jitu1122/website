@@ -1,0 +1,50 @@
+:host ::ng-deep .logo {
+  height: 32px;
+  background: rgba(255,255,255,.2);
+  margin: 16px;
+}
+:host ::ng-deep .typewriter {
+  width: fit-content;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /*letter-spacing: .15em; !* Adjust as needed *!*/
+  animation-direction: alternate;
+  animation:
+          /*typing 3.5s steps(40, end),*/
+          blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+.background-main {
+  background-color: rgba(90,100,121,0.8);
+  background-image: url("../../assets/back.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: exclusion;
+}
+.ant-layout-sider, .logo{
+  transition: all ease-in 300ms !important;
+}
+:host ::ng-deep .ant-layout-sider-trigger {
+  transition: all ease-in 300ms !important;
+}
+.pro-pic-lg {
+  height: 167px;
+}
+.pro-pic-sm {
+  height: 55px;
+}
+.ant-layout {
+  min-height: 100vh;
+}

@@ -1,0 +1,34 @@
+<nz-layout>
+  <nz-sider  nzCollapsible [(nzCollapsed)]="isCollapsed" [nzBreakpoint]="'lg'">
+    <div class="logo" [ngClass]="{'pro-pic-lg': !isCollapsed, 'pro-pic-sm': isCollapsed}">
+      <img src="../assets/profile_picture.png" alt="Jom" style="height: 100%;">
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+      <li nz-menu-item routerLink="/"><span><i nz-icon type="user"></i><span class="nav-text">Home</span></span></li>
+      <li nz-menu-item routerLink="/about-me"><span><i nz-icon type="video-camera"></i><span class="nav-text">About Me</span></span>
+      </li>
+      <li nz-menu-item routerLink="/resume"><span><i nz-icon type="upload"></i><span class="nav-text">Resume</span></span></li>
+      <li nz-menu-item routerLink="/contact"><span><i nz-icon type="user"></i><span class="nav-text">Contact</span></span></li>
+    </ul>
+  </nz-sider>
+  <nz-layout [ngClass]="{'background-main': router.url==='/'}">
+    <!--<nz-header style="background: #fff; padding:0;"></nz-header>-->
+    <nz-content *ngIf="router.url==='/'" style="margin:24px 16px 0;color: aliceblue">
+      <div style="padding:24px; min-height:100%; display: flex">
+        <div style="margin: auto auto 20px">
+          <div style="text-align: center; font-family: 'Montserrat', serif; font-size: 2em;">
+            Hi, I'm
+          </div>
+          <div style="text-align: center; font-family: 'Montserrat', serif; letter-spacing: -4px;line-height: 1;font-size: 8em; font-weight: bold;">
+            Jitu
+          </div>
+          <div class="typewriter" style="text-align: center; font-family: 'Montserrat', serif; font-size: 2em;">
+            I am <strong class="typewrite" data-period="2000" data-type='[ "a frontend developer.", "a painter.", "a tea lover.", "creative." ]'></strong>
+          </div>
+        </div>
+      </div>
+    </nz-content>
+    <router-outlet *ngIf="router.url!=='/'"></router-outlet>
+    <nz-footer style="text-align: center; background-color: transparent; color: darkgrey">Jitendra Singh Chauhan ©2019</nz-footer>
+  </nz-layout>
+</nz-layout>
