@@ -1,7 +1,7 @@
 <nz-layout>
   <nz-sider  nzCollapsible [(nzCollapsed)]="isCollapsed" [nzBreakpoint]="'lg'">
     <div class="logo" [ngClass]="{'pro-pic-lg': !isCollapsed, 'pro-pic-sm': isCollapsed}">
-      <img src="../assets/profile_picture.png" alt="Jom" style="height: 100%;">
+      <img src="assets/profile_picture.png" alt="Jom" style="height: 100%;">
     </div>
     <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
       <li nz-menu-item routerLink="/"><span><i nz-icon type="user"></i><span class="nav-text">Home</span></span></li>
