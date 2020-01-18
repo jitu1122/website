@@ -813,7 +813,7 @@ body {
 .resume-details ul.description {
     padding-left: 0;
     list-style: inside;
-    list-style-type: lower-roman;
+    list-style-type: circle;
 }
 
 /*------------------------------------------------------------------------------------------*/
